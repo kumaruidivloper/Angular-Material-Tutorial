@@ -38,8 +38,7 @@ import {
 
 import { CdkTableModule } from '@angular/cdk/table';
 
-@NgModule({
-    exports: [
+const MaterialComponents = [
         CdkTableModule,
         MatAutocompleteModule,
         MatButtonModule,
@@ -73,6 +72,11 @@ import { CdkTableModule } from '@angular/cdk/table';
         MatTabsModule,
         MatToolbarModule,
         MatTooltipModule
+]
+
+@NgModule({
+    exports: [
+        MaterialComponents
     ],
     providers: [  
         {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}  
