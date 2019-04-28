@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular-Material-Tutorial';
 
-  logChange(index) {
-    console.log(index)
-  }
+  public selectedValue: string;
+  public selectedGroupValue: string;
+  public selectedGroupValueMulti: string;
 }

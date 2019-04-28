@@ -1,48 +1,56 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
-  <h4>Mat-Input</h4>
+  <h4>Mat-Select</h4>
 </div>
 
 <div class="container white-bg">
-  <h4>Basic Input</h4>
-  <!--[floatLabel] attr label animation control [always] label on top [auto] attr default-->
-  <!--[hideRequiredMarker] attr hide marker-->
-    <mat-form-field floatLabel="auto" appearance="legacy">
-      <mat-label>Name</mat-label>
-      <!--[required, ]-->
-      <input matInput required>
+  <h4>Basic Select</h4>
+    <mat-form-field>
+      <mat-label>Topic</mat-label>
+      <mat-select [(value)]="selectedValue">
+        <mat-option>None</mat-option>
+        <mat-option value="angular">Angular</mat-option>
+        <mat-option value="react">React</mat-option>
+        <mat-option value="vue">Vue</mat-option>
+      </mat-select>
     </mat-form-field>
-    <mat-hint align="end">Min 5 Characters</mat-hint>
+    {{selectedValue}}
 
-    <h4>Appearance Standard</h4>
-  <!--[floatLabel] attr label animation control [always] label on top [auto] attr default-->
-  <!--[hideRequiredMarker] attr hide marker-->
-    <mat-form-field floatLabel="auto" appearance="standard">
-      <mat-label>Name</mat-label>
-      <!--[required, ]-->
-      <input matInput required>
+    <h4>Group Select</h4>
+    <mat-form-field>
+      <mat-label>Topic</mat-label>
+      <mat-select [(value)]="selectedGroupValue">
+        <mat-option>None</mat-option>
+        <mat-optgroup label="Web">
+          <mat-option value="angular">Angular</mat-option>
+          <mat-option value="react">React</mat-option>
+          <mat-option value="vue">Vue</mat-option>
+        </mat-optgroup>
+        <mat-optgroup label="Mobile">
+            <mat-option value="ionic">Ionic</mat-option>
+            <mat-option value="reactnative">Reactnative</mat-option>
+        </mat-optgroup>
+      </mat-select>
     </mat-form-field>
-    <mat-hint align="end">Min 5 Characters</mat-hint>
+    {{selectedGroupValue}}
 
-    <h4>Appearance Fill</h4>
-  <!--[floatLabel] attr label animation control [always] label on top [auto] attr default-->
-  <!--[hideRequiredMarker] attr hide marker-->
-    <mat-form-field floatLabel="auto" appearance="fill" color="accent">
-      <mat-label>Name</mat-label>
-      <!--[required, ]-->
-      <input matInput required>
+    <h4>Group Select with Multiple</h4>
+    <mat-form-field>
+      <mat-label>Topic</mat-label>
+      <mat-select [(value)]="selectedGroupValueMulti" multiple>
+        <mat-option>None</mat-option>
+        <mat-optgroup label="Web">
+          <mat-option value="angular">Angular</mat-option>
+          <mat-option value="react">React</mat-option>
+          <mat-option value="vue">Vue</mat-option>
+        </mat-optgroup>
+        <mat-optgroup label="Mobile">
+            <mat-option value="ionic">Ionic</mat-option>
+            <mat-option value="reactnative">Reactnative</mat-option>
+        </mat-optgroup>
+      </mat-select>
     </mat-form-field>
-    <mat-hint align="end">Min 5 Characters</mat-hint>
-
-    <h4>Appearance Outline</h4>
-  <!--[floatLabel] attr label animation control [always] label on top [auto] attr default-->
-  <!--[hideRequiredMarker] attr hide marker-->
-    <mat-form-field floatLabel="auto" appearance="outline" color="warn">
-      <mat-label>Name</mat-label>
-      <!--[required, ]-->
-      <input matInput required>
-    </mat-form-field>
-    <mat-hint align="end">Min 5 Characters</mat-hint>
+    {{selectedGroupValueMulti}}
 </div>
 
     
