@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
-import {MatSnackBar} from '@angular/material';
+import { MatDialog } from '@angular/material';
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 
 @Component({
   selector: 'app-root',
@@ -9,37 +10,13 @@ import {MatSnackBar} from '@angular/material';
 export class AppComponent {
   title = 'Angular-Material-Tutorial';
 
-  constructor(private snackBar: MatSnackBar) {}
+  constructor(public dialog: MatDialog) {}
 
-  openSnackBar(message) {
-    this.snackBar.open(message);
-  }
+  openDialog() {
+    let dialogRef = this.dialog.open(DialogExampleComponent, {data: {name: 'Kumar'}});
 
-  openSnackBar1(message, action) {
-    this.snackBar.open(message, action);
-  }
-
-  openSnackBar2(message, action) {
-    let snackBarRef = this.snackBar.open(message, action, {duration: 2000});
-
-    snackBarRef.afterDismissed().subscribe(() => {
-      console.log('The snackbar was dismissed');
-    });
-
-    snackBarRef.onAction().subscribe(() => {
-      console.log('The snackbar action was trigger');
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`)
     })
   }
-
-  openCustomSnackBar() {
-    this.snackBar.openFromComponent(CustomSnackBarComponent, {duration: 2000})
-  }
 }
-
-
-@Component({
-  selector: 'custom-snackbar',
-  template: `<span style='color: orange'>Custom Snackbar</span>`
-})
-
-export class CustomSnackBarComponent {}
