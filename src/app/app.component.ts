@@ -7,18 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Material-Tutorial';
-  notifications = 2;
-  notificationsZero = 0;
-  showSpinner = false;
-  dataText = false;
 
+  public opened = false;
 
-  loadData() {
-    this.showSpinner = true;
-    this.dataText = false;
-    setTimeout(() => {
-      this.showSpinner = false;
-      this.dataText = true;
-    }, 5000)
+  log(state) {
+    console.log(state);
   }
 }

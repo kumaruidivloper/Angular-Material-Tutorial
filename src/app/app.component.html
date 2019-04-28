@@ -1,46 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
-  <mat-toolbar>
-    <span>Sample Tool Bar Basic</span>
-  </mat-toolbar>
-
-  <br><br>
-
-  <mat-toolbar color="accent">
-      <span>Sample Tool Bar with Some Color</span>
-  </mat-toolbar>
-
-  <br><br>
-
-  <mat-toolbar color="primary" class="navbar">
-      <div>Sample Tool With Menu</div >
-      <div>
-        <span>Home</span>
-        <span>About</span>
-        <span>Services</span>
-      </div>
-  </mat-toolbar>
-
-
-  <br><br>
-
-  <mat-toolbar color="primary">
-      <mat-toolbar-row>
-        <span>Custom Toolbar</span>
-      </mat-toolbar-row>
-    
-      <mat-toolbar-row>
-        <span>Second Line</span>
-        <span class="example-spacer"></span>
-        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
-      </mat-toolbar-row>
-    
-      <mat-toolbar-row>
-        <span>Third Line</span>
-        <span class="example-spacer"></span>
-        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
-        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
-      </mat-toolbar-row>
-    </mat-toolbar>
+<mat-sidenav-container>
+  <!--By Default Side nav not display SO we can add attr [opened]-->
+  <!--mode="over"/mode="push"/mode="side"-->
+  <mat-sidenav 
+  #sidenav 
+  (opened)="log('Opened')" 
+  (closed)="log('closed')" 
+  mode="side" 
+  [(opened)]="opened">Sidenav</mat-sidenav>
+  <mat-sidenav-content>Main Content
+    <button mat-raised-button (click)="opened=!opened">Toggle Opened</button>
+    <button mat-raised-button (click)="sidenav.open()">Open</button>
+    <button mat-raised-button (click)="sidenav.close()">Close</button>
+    <button mat-raised-button (click)="sidenav.toggle()">Toggle</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
 
 <router-outlet></router-outlet>
