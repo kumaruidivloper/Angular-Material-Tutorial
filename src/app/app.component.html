@@ -1,52 +1,140 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
-  <h4>Mat-Grid-List</h4>
+  <h4>Mat-Expansion-Panel</h4>
 </div>
 
 <div class="container white-bg">
-   <mat-grid-list cols="2">
-      <mat-grid-tile>Tile 1</mat-grid-tile>
-      <mat-grid-tile>Tile 2</mat-grid-tile>
-      <mat-grid-tile>Tile 3</mat-grid-tile>
-      <mat-grid-tile>Tile 4</mat-grid-tile>
-   </mat-grid-list>
-</div>
+  <h4>Expansion Panel</h4>
+   <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Angular Fundamentals
+        </mat-panel-title>
+        <mat-panel-title>
+          Total Duration : 3 hours
+          </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        This is the panel content. Add course details.
+      </p>
+      <mat-action-row>
+        <button mat-raised-button>
+          Enroll
+        </button>
+      </mat-action-row>
+   </mat-expansion-panel>
 
-<div class="container white-bg">
-    <mat-grid-list cols="2" rowHeight="100px">
-       <mat-grid-tile>Tile 5</mat-grid-tile>
-       <mat-grid-tile>Tile 6</mat-grid-tile>
-       <mat-grid-tile>Tile 7</mat-grid-tile>
-       <mat-grid-tile>Tile 8</mat-grid-tile>
-    </mat-grid-list>
+
+   <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Angular Material
+        </mat-panel-title>
+        <mat-panel-title>
+          Total Duration : 2 hours
+          </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>
+        This is the panel content. Add course details.
+      </p>
+      <mat-action-row>
+        <button mat-raised-button>
+          Enroll
+        </button>
+      </mat-action-row>
+   </mat-expansion-panel>
  </div>
+
+
 
  <div class="container white-bg">
-    <mat-grid-list cols="2" rowHeight="2:1">
-       <mat-grid-tile>Tile 9</mat-grid-tile>
-       <mat-grid-tile>Tile 10</mat-grid-tile>
-       <mat-grid-tile>Tile 11</mat-grid-tile>
-       <mat-grid-tile>Tile 12</mat-grid-tile>
-    </mat-grid-list>
- </div>
+    <h4>Accordion Panel</h4>
+   <mat-accordion>
+    <mat-expansion-panel>
+       <mat-expansion-panel-header>
+         <mat-panel-title>
+           Angular Fundamentals
+         </mat-panel-title>
+         <mat-panel-title>
+           Total Duration : 3 hours
+           </mat-panel-title>
+       </mat-expansion-panel-header>
+       <p>
+         This is the panel content. Add course details.
+       </p>
+       <mat-action-row>
+         <button mat-raised-button>
+           Enroll
+         </button>
+       </mat-action-row>
+    </mat-expansion-panel>
+ 
+ 
+    <mat-expansion-panel>
+       <mat-expansion-panel-header>
+         <mat-panel-title>
+           Angular Material
+         </mat-panel-title>
+         <mat-panel-title>
+           Total Duration : 2 hours
+           </mat-panel-title>
+       </mat-expansion-panel-header>
+       <p>
+         This is the panel content. Add course details.
+       </p>
+       <mat-action-row>
+         <button mat-raised-button>
+           Enroll
+         </button>
+       </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  </div>
 
- <div class="container white-bg">
-    <mat-grid-list cols="2" rowHeight="fit" style="height: 200px">
-       <mat-grid-tile>Tile 13</mat-grid-tile>
-       <mat-grid-tile>Tile 14</mat-grid-tile>
-       <mat-grid-tile>Tile 15</mat-grid-tile>
-       <mat-grid-tile>Tile 16</mat-grid-tile>
-    </mat-grid-list>
- </div>
-
- <div class="container white-bg">
-    <mat-grid-list cols="2" rowHeight="fit" style="height: 200px" gutterSize="10px">
-       <mat-grid-tile>Tile 17</mat-grid-tile>
-       <mat-grid-tile>Tile 18</mat-grid-tile>
-       <mat-grid-tile>Tile 19</mat-grid-tile>
-       <mat-grid-tile>Tile 20</mat-grid-tile>
-    </mat-grid-list>
- </div>
+  <div class="container white-bg">
+      <h4>Accordion Panel Multi Open</h4>
+      <!-- Hide Toggle Icon use [hideToggle] Prop-->
+     <mat-accordion multi="true">
+      <mat-expansion-panel>
+         <mat-expansion-panel-header>
+           <mat-panel-title>
+             Angular Fundamentals
+           </mat-panel-title>
+           <mat-panel-title>
+             Total Duration : 3 hours
+             </mat-panel-title>
+         </mat-expansion-panel-header>
+         <p>
+           This is the panel content. Add course details.
+         </p>
+         <mat-action-row>
+           <button mat-raised-button>
+             Enroll
+           </button>
+         </mat-action-row>
+      </mat-expansion-panel>
+   
+   
+      <mat-expansion-panel>
+         <mat-expansion-panel-header>
+           <mat-panel-title>
+             Angular Material
+           </mat-panel-title>
+           <mat-panel-title>
+             Total Duration : 2 hours
+             </mat-panel-title>
+         </mat-expansion-panel-header>
+         <p>
+           This is the panel content. Add course details.
+         </p>
+         <mat-action-row>
+           <button mat-raised-button>
+             Enroll
+           </button>
+         </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+    </div>
 
     
 
