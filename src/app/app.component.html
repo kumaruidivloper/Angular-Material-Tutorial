@@ -1,29 +1,33 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
-  <h4>Mat-AutoComplete</h4>
+  <h4>Mat-Checkbox & Radio</h4>
 </div>
 
 <div class="container white-bg">
-    <form class="example-form">
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="State" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
-          <mat-autocomplete #auto="matAutocomplete">
-            <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
-              <img class="example-option-img" aria-hidden [src]="state.flag" height="25">
-              <span>{{state.name}}</span> |
-              <small>Population: {{state.population}}</small>
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
-      
-        <br>
-      
-        <mat-slide-toggle
-          [checked]="stateCtrl.disabled"
-          (change)="stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()">
-          Disable Input?
-        </mat-slide-toggle>
-      </form>
+  <h4>Basic Checkbox</h4>
+    <mat-checkbox>
+       Subscribe
+    </mat-checkbox>
+
+  <h4>Basic Checkbox LablePosition[Before]</h4>
+    <mat-checkbox labelPosition="before">
+        Subscribe
+    </mat-checkbox>
+    <br><br>
+    <mat-checkbox color="primary">
+        Subscribe
+    </mat-checkbox>
+    <br><br>
+    <mat-checkbox color="warn" labelPosition="before">
+        Subscribe
+    </mat-checkbox>
+
+    <h4>Basic Radio</h4>
+    <mat-radio-group>
+      <mat-radio-button value="angular" color="primary">Angular</mat-radio-button>
+      <mat-radio-button value="react" color="warn">React</mat-radio-button>
+      <mat-radio-button value="vue">Vue</mat-radio-button>
+    </mat-radio-group>
 </div>
 
     
