@@ -1,33 +1,50 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
-  <h4>Mat-Checkbox & Radio</h4>
+  <h4>Mat-DatePicker</h4>
 </div>
 
 <div class="container white-bg">
-  <h4>Basic Checkbox</h4>
-    <mat-checkbox>
-       Subscribe
-    </mat-checkbox>
+  <h4>Basic Date Picker</h4>
+    <mat-form-field>
+        <input matInput [matDatepicker]="matDatePicker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="matDatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #matDatePicker></mat-datepicker>
+    </mat-form-field>
 
-  <h4>Basic Checkbox LablePosition[Before]</h4>
-    <mat-checkbox labelPosition="before">
-        Subscribe
-    </mat-checkbox>
-    <br><br>
-    <mat-checkbox color="primary">
-        Subscribe
-    </mat-checkbox>
-    <br><br>
-    <mat-checkbox color="warn" labelPosition="before">
-        Subscribe
-    </mat-checkbox>
+    <h4>Basic Date Picker View Year</h4>
+    <mat-form-field>
+        <input matInput [matDatepicker]="matDatePicker1" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="matDatePicker1"></mat-datepicker-toggle>
+        <mat-datepicker #matDatePicker1 startView="year"></mat-datepicker>
+    </mat-form-field>
 
-    <h4>Basic Radio</h4>
-    <mat-radio-group>
-      <mat-radio-button value="angular" color="primary">Angular</mat-radio-button>
-      <mat-radio-button value="react" color="warn">React</mat-radio-button>
-      <mat-radio-button value="vue">Vue</mat-radio-button>
-    </mat-radio-group>
+    <h4>Basic Date Picker View Multi Year</h4>
+    <mat-form-field>
+        <input matInput [matDatepicker]="matDatePicker2" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="matDatePicker2"></mat-datepicker-toggle>
+        <mat-datepicker #matDatePicker2 startView="multi-year"></mat-datepicker>
+    </mat-form-field>
+
+    <h4>Basic Date Picker View Min Max</h4>
+    <mat-form-field>
+        <input matInput 
+        [min]="minDate"
+        [max]="maxDate"
+        [matDatepicker]="matDatePicker3" 
+        placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="matDatePicker3"></mat-datepicker-toggle>
+        <mat-datepicker #matDatePicker3></mat-datepicker>
+    </mat-form-field>
+
+    <h4>Basic Date Picker Filter Select Date [sat & sun Disable]</h4>
+    <mat-form-field>
+        <input matInput
+        [matDatepickerFilter]="dateFilter"
+        [matDatepicker]="matDatePicker4" 
+        placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="matDatePicker4"></mat-datepicker-toggle>
+        <mat-datepicker #matDatePicker4></mat-datepicker>
+    </mat-form-field>
 </div>
 
     
