@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Material-Tutorial';
+  notifications = 2;
+  notificationsZero = 0;
 }

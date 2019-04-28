@@ -37,9 +37,11 @@ import {
 } from '@angular/material';
 
 import { CdkTableModule } from '@angular/cdk/table';
+import { MatBadgeModule } from '@angular/material/badge';
 
 const MaterialComponents = [
         CdkTableModule,
+        MatBadgeModule,
         MatAutocompleteModule,
         MatButtonModule,
         MatButtonToggleModule,
