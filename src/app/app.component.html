@@ -1,140 +1,26 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
-  <h4>Mat-Expansion-Panel</h4>
+  <h4>Mat-Cards</h4>
 </div>
 
 <div class="container white-bg">
-  <h4>Expansion Panel</h4>
-   <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Angular Fundamentals
-        </mat-panel-title>
-        <mat-panel-title>
-          Total Duration : 3 hours
-          </mat-panel-title>
-      </mat-expansion-panel-header>
-      <p>
-        This is the panel content. Add course details.
-      </p>
-      <mat-action-row>
-        <button mat-raised-button>
-          Enroll
-        </button>
-      </mat-action-row>
-   </mat-expansion-panel>
+  <h4>Basic Card</h4>
+  <mat-card>Basic Card</mat-card>
 
-
-   <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Angular Material
-        </mat-panel-title>
-        <mat-panel-title>
-          Total Duration : 2 hours
-          </mat-panel-title>
-      </mat-expansion-panel-header>
-      <p>
-        This is the panel content. Add course details.
-      </p>
-      <mat-action-row>
-        <button mat-raised-button>
-          Enroll
-        </button>
-      </mat-action-row>
-   </mat-expansion-panel>
- </div>
-
-
-
- <div class="container white-bg">
-    <h4>Accordion Panel</h4>
-   <mat-accordion>
-    <mat-expansion-panel>
-       <mat-expansion-panel-header>
-         <mat-panel-title>
-           Angular Fundamentals
-         </mat-panel-title>
-         <mat-panel-title>
-           Total Duration : 3 hours
-           </mat-panel-title>
-       </mat-expansion-panel-header>
-       <p>
-         This is the panel content. Add course details.
-       </p>
-       <mat-action-row>
-         <button mat-raised-button>
-           Enroll
-         </button>
-       </mat-action-row>
-    </mat-expansion-panel>
- 
- 
-    <mat-expansion-panel>
-       <mat-expansion-panel-header>
-         <mat-panel-title>
-           Angular Material
-         </mat-panel-title>
-         <mat-panel-title>
-           Total Duration : 2 hours
-           </mat-panel-title>
-       </mat-expansion-panel-header>
-       <p>
-         This is the panel content. Add course details.
-       </p>
-       <mat-action-row>
-         <button mat-raised-button>
-           Enroll
-         </button>
-       </mat-action-row>
-    </mat-expansion-panel>
-  </mat-accordion>
-  </div>
-
-  <div class="container white-bg">
-      <h4>Accordion Panel Multi Open</h4>
-      <!-- Hide Toggle Icon use [hideToggle] Prop-->
-     <mat-accordion multi="true">
-      <mat-expansion-panel>
-         <mat-expansion-panel-header>
-           <mat-panel-title>
-             Angular Fundamentals
-           </mat-panel-title>
-           <mat-panel-title>
-             Total Duration : 3 hours
-             </mat-panel-title>
-         </mat-expansion-panel-header>
-         <p>
-           This is the panel content. Add course details.
-         </p>
-         <mat-action-row>
-           <button mat-raised-button>
-             Enroll
-           </button>
-         </mat-action-row>
-      </mat-expansion-panel>
-   
-   
-      <mat-expansion-panel>
-         <mat-expansion-panel-header>
-           <mat-panel-title>
-             Angular Material
-           </mat-panel-title>
-           <mat-panel-title>
-             Total Duration : 2 hours
-             </mat-panel-title>
-         </mat-expansion-panel-header>
-         <p>
-           This is the panel content. Add course details.
-         </p>
-         <mat-action-row>
-           <button mat-raised-button>
-             Enroll
-           </button>
-         </mat-action-row>
-      </mat-expansion-panel>
-    </mat-accordion>
-    </div>
+  <h4>Card With Title</h4>
+<mat-card>
+  <mat-card-title>Card Title</mat-card-title>
+  <mat-card-content>
+    This is the card content
+  </mat-card-content>
+  <!--[align="end"] align button right side -->
+  <mat-card-actions align="end">
+    <button mat-raised-button>
+      Login
+    </button>
+  </mat-card-actions>
+</mat-card>
+</div>
 
     
 
