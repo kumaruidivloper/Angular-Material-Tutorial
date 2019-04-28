@@ -36,3 +36,7 @@ div.Badge h4 {
 mat-grid-tile {
     background-color: lightblue;
 }
+
+mat-horizontal-stepper button, mat-vertical-stepper button {
+    margin-right:10px;
+}

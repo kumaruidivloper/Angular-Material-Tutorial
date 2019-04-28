@@ -1,32 +1,75 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
-  <h4>Mat-Tabs</h4>
+  <h4>Mat-Stepper</h4>
 </div>
 
 <div class="container white-bg">
-  <h4>Basic Tabs</h4>
-  <mat-tab-group>
-    <mat-tab label="Angular">Angular Content</mat-tab>
-    <mat-tab label="React">React Content</mat-tab>
-    <mat-tab label="Vue">Vue Content</mat-tab>
-  </mat-tab-group>
+  <h4>Basic Stepper</h4>
+  <mat-horizontal-stepper>
+    <mat-step label="Shipping Address">
+      <p>Shipping Address Details</p>
+    </mat-step>
+    <mat-step label="Billing Address">
+      <p>Billing Address Details</p>
+    </mat-step>
+    <mat-step label="Place Order">
+      <p>Order Details</p>
+    </mat-step>
+  </mat-horizontal-stepper>
 
-  <h4>Get Tabs Ref Index</h4>
-  <mat-tab-group #tabRef>
-    <mat-tab label="Angular">Angular Content</mat-tab>
-    <mat-tab label="React">React Content</mat-tab>
-    <mat-tab label="Vue">Vue Content</mat-tab>
-  </mat-tab-group>
-  {{tabRef.selectedIndex}}
 
-  <h4>Selected Tab Change</h4>
-  <!--Check with Browser console for Selected Index-->
-  <mat-tab-group color="warn" #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
-    <mat-tab label="Angular">Angular Content</mat-tab>
-    <mat-tab label="React">React Content</mat-tab>
-    <mat-tab label="Vue">Vue Content</mat-tab>
-  </mat-tab-group>
-  {{tabRef.selectedIndex}}
+  <h4>Basic Stepper With Button</h4>
+  <mat-horizontal-stepper>
+    <mat-step label="Shipping Address">
+      <p>Shipping Address Details</p>
+    </mat-step>
+    <mat-step label="Billing Address">
+      <p>Billing Address Details</p>
+      <div align="end">
+        <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+        <button mat-raised-button color="accent" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Place Order">
+      <p>Order Details</p>
+    </mat-step>
+  </mat-horizontal-stepper>
+
+  <h4>Linear Stepper</h4>
+  <mat-horizontal-stepper linear>
+    <mat-step label="Shipping Address" completed="true">
+      <p>Shipping Address Details</p>
+    </mat-step>
+    <!--[optional] Attr make stepper optional-->
+    <mat-step label="Billing Address" completed="false">
+      <p>Billing Address Details</p>
+      <div align="end">
+        <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+        <button mat-raised-button color="accent" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Place Order" completed="false">
+      <p>Order Details</p>
+    </mat-step>
+  </mat-horizontal-stepper>
+
+  <h4>Linear Stepper Vertical</h4>
+  <mat-vertical-stepper linear>
+    <mat-step label="Shipping Address" completed="true">
+      <p>Shipping Address Details</p>
+    </mat-step>
+    <!--[optional] Attr make stepper optional-->
+    <mat-step label="Billing Address" completed="false">
+      <p>Billing Address Details</p>
+      <div align="end">
+        <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+        <button mat-raised-button color="accent" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Place Order" completed="false">
+      <p>Order Details</p>
+    </mat-step>
+  </mat-vertical-stepper>
 </div>
 
     
