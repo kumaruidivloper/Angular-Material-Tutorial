@@ -1,150 +1,100 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
-  <h4>Button varieties</h4>
-</div>
-
-<div class="container">
-  <button mat-button>mat-button</button>
-  <br>
-  <br>
-  <button mat-raised-button>mat-raised-button</button>
-  <br>
-  <br>
-  <button mat-flat-button>mat-flat-button</button>
-  <br>
-  <br>
-  <button mat-stroked-button>mat-stroked-button</button>
-  <br>
-  <br>
-</div>
-<br>
-<br>
-<div class="container">
-  <button mat-icon-button>Icon</button>
-  <br>
-  <br>
-  <button mat-fab>Fab</button>
-  <br>
-  <br>
-  <button mat-mini-fab>Minifab</button>
-</div>
-
-<br>
-<br>
-<div class="container white-bg">
-  <button color="primary" mat-raised-button>Primary</button>
-  <br>
-  <br>
-  <button color="accent" mat-raised-button>Accent</button>
-  <br>
-  <br>
-  <button color="warn" mat-raised-button>Warn</button>
-  <br>
-  <br>
-  <button color="primary" mat-button>Primary</button>
-  <br>
-  <br>
-  <button color="accent" mat-button>Accent</button>
-  <br>
-  <br>
-  <button color="warn" mat-button>Warn</button> 
-  <br>
-  <br>
-  <h4>Disable Ripple Effects For buttons</h4>
-  <button color="primary" disableRipple mat-button>Primary</button>
-  <br>
-  <br>
-  <button color="accent" disableRipple mat-button>Accent</button>
-  <br>
-  <br>
-  <button color="warn" disableRipple mat-button>Warn</button>
+  <h4>Button Toggle</h4>
 </div>
 
 <div class="container white-bg">
-<h3>Basic Buttons</h3>
-<div class="example-button-row">
-  <button mat-button>Basic</button>
-  <button mat-button color="primary">Primary</button>
-  <button mat-button color="accent">Accent</button>
-  <button mat-button color="warn">Warn</button>
-  <button mat-button disabled>Disabled</button>
-  <a mat-button routerLink=".">Link</a>
+  <mat-button-toggle #toggleBtn>Toggle</mat-button-toggle>
+  <span class="text-color">
+    Selected Value: {{toggleBtn.checked}}
+  </span>
+  <br><br>
+  <h4>Default Checked</h4>
+  <mat-button-toggle #toggleBtn1 checked>Toggle-1</mat-button-toggle>
+  <span class="text-color">
+    Selected Value: {{toggleBtn1.checked}}
+  </span>
+  <br><br>
+  <h4>Ripple Effects Disable</h4>
+  <mat-button-toggle #toggleBtn2 checked disableRipple>Toggle-1</mat-button-toggle>
+  <span class="text-color">
+    Selected Value: {{toggleBtn2.checked}}
+  </span>
+  <br><br>
+  <h4>Button Disable</h4>
+  <mat-button-toggle #toggleBtn3  disabled >Toggle-1</mat-button-toggle>
+  <span class="text-color">
+    Selected Value: {{toggleBtn3.checked}}
+  </span>
 </div>
 
-<h3>Raised Buttons</h3>
-<div class="example-button-row">
-  <button mat-raised-button>Basic</button>
-  <button mat-raised-button color="primary">Primary</button>
-  <button mat-raised-button color="accent">Accent</button>
-  <button mat-raised-button color="warn">Warn</button>
-  <button mat-raised-button disabled>Disabled</button>
-  <a mat-raised-button routerLink=".">Link</a>
+<div class="title white-bg">
+  <h4>Button Toggle Group</h4>
 </div>
 
-<h3>Stroked Buttons</h3>
-<div class="example-button-row">
-  <button mat-stroked-button>Basic</button>
-  <button mat-stroked-button color="primary">Primary</button>
-  <button mat-stroked-button color="accent">Accent</button>
-  <button mat-stroked-button color="warn">Warn</button>
-  <button mat-stroked-button disabled>Disabled</button>
-  <a mat-stroked-button routerLink=".">Link</a>
-</div>
+<div class="container white-bg">
+  <mat-button-toggle-group #toggleGroup="matButtonToggleGroup">
+    <mat-button-toggle value="angular">Angular</mat-button-toggle>
+    <mat-button-toggle value="react">React</mat-button-toggle>
+    <mat-button-toggle value="vue">Vue</mat-button-toggle>
+  </mat-button-toggle-group>
+  <span class="text-color">
+    Selected Multiple Value: {{toggleGroup.value}}
+  </span>
 
-<h3>Flat Buttons</h3>
-<div class="example-button-row">
-  <button mat-flat-button>Basic</button>
-  <button mat-flat-button color="primary">Primary</button>
-  <button mat-flat-button color="accent">Accent</button>
-  <button mat-flat-button color="warn">Warn</button>
-  <button mat-flat-button disabled>Disabled</button>
-  <a mat-flat-button routerLink=".">Link</a>
-</div>
+  <br>
+  <br>
+  <h4>Multiple Select</h4>
 
-<h3>Icon Buttons</h3>
-<div class="example-button-row">
-  <button mat-icon-button>
-    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-  </button>
-  <button mat-icon-button color="primary">
-    <mat-icon aria-label="Example icon-button with a heart icon">face</mat-icon>
-  </button>
-  <button mat-icon-button color="accent">
-    <mat-icon aria-label="Example icon-button with a heart icon">delete</mat-icon>
-  </button>
-  <button mat-icon-button color="warn">
-    <mat-icon aria-label="Example icon-button with a heart icon">logout</mat-icon>
-  </button>
-  <button mat-icon-button disabled>
-    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-  </button>
-</div>
+  <mat-button-toggle-group #toggleGroup1="matButtonToggleGroup" multiple>
+      <mat-button-toggle value="angular">Angular</mat-button-toggle>
+      <mat-button-toggle value="react">React</mat-button-toggle>
+      <mat-button-toggle value="vue">Vue</mat-button-toggle>
+    </mat-button-toggle-group>
+    <span class="text-color">
+      Selected Value: {{toggleGroup1.value}}
+    </span>
 
-<h3>Fab Buttons</h3>
-<div class="example-button-row">
-  <button mat-fab>Basic</button>
-  <button mat-fab color="primary">Primary</button>
-  <button mat-fab color="accent">Accent</button>
-  <button mat-fab color="warn">Warn</button>
-  <button mat-fab disabled>Disabled</button>
-  <button mat-fab>
-    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-  </button>
-  <a mat-fab routerLink=".">Link</a>
-</div>
 
-<h3>Mini Fab Buttons</h3>
-<div class="example-button-row">
-  <button mat-mini-fab>Basic</button>
-  <button mat-mini-fab color="primary">Primary</button>
-  <button mat-mini-fab color="accent">Accent</button>
-  <button mat-mini-fab color="warn">Warn</button>
-  <button mat-mini-fab disabled>Disabled</button>
-  <button mat-mini-fab>
-    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-  </button>
-  <a mat-mini-fab routerLink=".">Link</a>
-</div>
+    <h4>Select Value With Icon</h4>
+
+    <mat-button-toggle-group #group="matButtonToggleGroup">
+        <mat-button-toggle value="left">
+          <mat-icon>format_align_left</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="center">
+          <mat-icon>format_align_center</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="right">
+          <mat-icon>format_align_right</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="justify" disabled>
+          <mat-icon>format_align_justify</mat-icon>
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+      <div class="example-selected-value text-color">
+        Selected value: {{group.value}}
+      </div>
+
+      <h4>Multiple Select With Icon</h4>
+
+    <mat-button-toggle-group #group1="matButtonToggleGroup" multiple>
+        <mat-button-toggle value="left">
+          <mat-icon>format_align_left</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="center">
+          <mat-icon>format_align_center</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="right">
+          <mat-icon>format_align_right</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="justify" disabled>
+          <mat-icon>format_align_justify</mat-icon>
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+      <div class="example-selected-value text-color">
+        Selected Multiple value: {{group1.value}}
+      </div>
 </div>
 
 
