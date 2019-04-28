@@ -33,7 +33,8 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     ErrorStateMatcher,
-    ShowOnDirtyErrorStateMatcher
+    ShowOnDirtyErrorStateMatcher,
+    MatFormFieldModule
 } from '@angular/material';
 
 import { CdkTableModule } from '@angular/cdk/table';
@@ -73,7 +74,8 @@ const MaterialComponents = [
         MatTableModule,
         MatTabsModule,
         MatToolbarModule,
-        MatTooltipModule
+        MatTooltipModule,
+        MatFormFieldModule
 ]
 
 @NgModule({

@@ -1,75 +1,48 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
-  <h4>Mat-Stepper</h4>
+  <h4>Mat-Input</h4>
 </div>
 
 <div class="container white-bg">
-  <h4>Basic Stepper</h4>
-  <mat-horizontal-stepper>
-    <mat-step label="Shipping Address">
-      <p>Shipping Address Details</p>
-    </mat-step>
-    <mat-step label="Billing Address">
-      <p>Billing Address Details</p>
-    </mat-step>
-    <mat-step label="Place Order">
-      <p>Order Details</p>
-    </mat-step>
-  </mat-horizontal-stepper>
+  <h4>Basic Input</h4>
+  <!--[floatLabel] attr label animation control [always] label on top [auto] attr default-->
+  <!--[hideRequiredMarker] attr hide marker-->
+    <mat-form-field floatLabel="auto" appearance="legacy">
+      <mat-label>Name</mat-label>
+      <!--[required, ]-->
+      <input matInput required>
+    </mat-form-field>
+    <mat-hint align="end">Min 5 Characters</mat-hint>
 
+    <h4>Appearance Standard</h4>
+  <!--[floatLabel] attr label animation control [always] label on top [auto] attr default-->
+  <!--[hideRequiredMarker] attr hide marker-->
+    <mat-form-field floatLabel="auto" appearance="standard">
+      <mat-label>Name</mat-label>
+      <!--[required, ]-->
+      <input matInput required>
+    </mat-form-field>
+    <mat-hint align="end">Min 5 Characters</mat-hint>
 
-  <h4>Basic Stepper With Button</h4>
-  <mat-horizontal-stepper>
-    <mat-step label="Shipping Address">
-      <p>Shipping Address Details</p>
-    </mat-step>
-    <mat-step label="Billing Address">
-      <p>Billing Address Details</p>
-      <div align="end">
-        <button mat-raised-button color="accent" matStepperPrevious>Back</button>
-        <button mat-raised-button color="accent" matStepperNext>Next</button>
-      </div>
-    </mat-step>
-    <mat-step label="Place Order">
-      <p>Order Details</p>
-    </mat-step>
-  </mat-horizontal-stepper>
+    <h4>Appearance Fill</h4>
+  <!--[floatLabel] attr label animation control [always] label on top [auto] attr default-->
+  <!--[hideRequiredMarker] attr hide marker-->
+    <mat-form-field floatLabel="auto" appearance="fill" color="accent">
+      <mat-label>Name</mat-label>
+      <!--[required, ]-->
+      <input matInput required>
+    </mat-form-field>
+    <mat-hint align="end">Min 5 Characters</mat-hint>
 
-  <h4>Linear Stepper</h4>
-  <mat-horizontal-stepper linear>
-    <mat-step label="Shipping Address" completed="true">
-      <p>Shipping Address Details</p>
-    </mat-step>
-    <!--[optional] Attr make stepper optional-->
-    <mat-step label="Billing Address" completed="false">
-      <p>Billing Address Details</p>
-      <div align="end">
-        <button mat-raised-button color="accent" matStepperPrevious>Back</button>
-        <button mat-raised-button color="accent" matStepperNext>Next</button>
-      </div>
-    </mat-step>
-    <mat-step label="Place Order" completed="false">
-      <p>Order Details</p>
-    </mat-step>
-  </mat-horizontal-stepper>
-
-  <h4>Linear Stepper Vertical</h4>
-  <mat-vertical-stepper linear>
-    <mat-step label="Shipping Address" completed="true">
-      <p>Shipping Address Details</p>
-    </mat-step>
-    <!--[optional] Attr make stepper optional-->
-    <mat-step label="Billing Address" completed="false">
-      <p>Billing Address Details</p>
-      <div align="end">
-        <button mat-raised-button color="accent" matStepperPrevious>Back</button>
-        <button mat-raised-button color="accent" matStepperNext>Next</button>
-      </div>
-    </mat-step>
-    <mat-step label="Place Order" completed="false">
-      <p>Order Details</p>
-    </mat-step>
-  </mat-vertical-stepper>
+    <h4>Appearance Outline</h4>
+  <!--[floatLabel] attr label animation control [always] label on top [auto] attr default-->
+  <!--[hideRequiredMarker] attr hide marker-->
+    <mat-form-field floatLabel="auto" appearance="outline" color="warn">
+      <mat-label>Name</mat-label>
+      <!--[required, ]-->
+      <input matInput required>
+    </mat-form-field>
+    <mat-hint align="end">Min 5 Characters</mat-hint>
 </div>
 
     
