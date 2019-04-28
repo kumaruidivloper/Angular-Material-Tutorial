@@ -8,9 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular-Material-Tutorial';
 
-  public opened = false;
-
-  log(state) {
-    console.log(state);
+  logChange(index) {
+    console.log(index)
   }
 }

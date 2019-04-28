@@ -1,25 +1,32 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
-  <h4>Mat-Cards</h4>
+  <h4>Mat-Tabs</h4>
 </div>
 
 <div class="container white-bg">
-  <h4>Basic Card</h4>
-  <mat-card>Basic Card</mat-card>
+  <h4>Basic Tabs</h4>
+  <mat-tab-group>
+    <mat-tab label="Angular">Angular Content</mat-tab>
+    <mat-tab label="React">React Content</mat-tab>
+    <mat-tab label="Vue">Vue Content</mat-tab>
+  </mat-tab-group>
 
-  <h4>Card With Title</h4>
-<mat-card>
-  <mat-card-title>Card Title</mat-card-title>
-  <mat-card-content>
-    This is the card content
-  </mat-card-content>
-  <!--[align="end"] align button right side -->
-  <mat-card-actions align="end">
-    <button mat-raised-button>
-      Login
-    </button>
-  </mat-card-actions>
-</mat-card>
+  <h4>Get Tabs Ref Index</h4>
+  <mat-tab-group #tabRef>
+    <mat-tab label="Angular">Angular Content</mat-tab>
+    <mat-tab label="React">React Content</mat-tab>
+    <mat-tab label="Vue">Vue Content</mat-tab>
+  </mat-tab-group>
+  {{tabRef.selectedIndex}}
+
+  <h4>Selected Tab Change</h4>
+  <!--Check with Browser console for Selected Index-->
+  <mat-tab-group color="warn" #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
+    <mat-tab label="Angular">Angular Content</mat-tab>
+    <mat-tab label="React">React Content</mat-tab>
+    <mat-tab label="Vue">Vue Content</mat-tab>
+  </mat-tab-group>
+  {{tabRef.selectedIndex}}
 </div>
 
     
