@@ -1,20 +1,77 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<mat-sidenav-container>
-  <!--By Default Side nav not display SO we can add attr [opened]-->
-  <!--mode="over"/mode="push"/mode="side"-->
-  <mat-sidenav 
-  #sidenav 
-  (opened)="log('Opened')" 
-  (closed)="log('closed')" 
-  mode="side" 
-  [(opened)]="opened">Sidenav</mat-sidenav>
-  <mat-sidenav-content>Main Content
-    <button mat-raised-button (click)="opened=!opened">Toggle Opened</button>
-    <button mat-raised-button (click)="sidenav.open()">Open</button>
-    <button mat-raised-button (click)="sidenav.close()">Close</button>
-    <button mat-raised-button (click)="sidenav.toggle()">Toggle</button>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<div class="title white-bg">
+  <h4>Mat-Menu</h4>
+</div>
+
+<div class="container white-bg">
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item>FrontEnd</button>
+      <button mat-menu-item>BacKEnd</button>
+    </mat-menu>
+    
+    <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+    </div>
+
+<div class="container white-bg">
+<mat-menu #appMenu1="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="subMenu">FrontEnd</button>
+  <button mat-menu-item>BacKEnd</button>
+</mat-menu>
+
+<button mat-flat-button [matMenuTriggerFor]="appMenu1">Menu With sub</button>
+<mat-menu #subMenu="matMenu">
+    <button mat-menu-item>Angular</button>
+    <button mat-menu-item>React</button>
+    <button mat-menu-item>Veu</button>
+  </mat-menu>
+</div>
+
+<div class="container white-bg">
+  <h4>Menu Position</h4>
+    <mat-menu #appMenu2="matMenu" xPosition="after" yPosition="above">
+      <button mat-menu-item [matMenuTriggerFor]="subMenu1">FrontEnd</button>
+      <button mat-menu-item>BacKEnd</button>
+    </mat-menu>
+    
+    <button mat-flat-button [matMenuTriggerFor]="appMenu2">Menu With sub</button>
+    <mat-menu #subMenu1="matMenu">
+        <button mat-menu-item>Angular</button>
+        <button mat-menu-item>React</button>
+        <button mat-menu-item>Veu</button>
+      </mat-menu>
+</div>
+
+<div class="container white-bg">
+    <h4>Menu Dynamic Content</h4>
+      <mat-menu #appMenu3="matMenu" xPosition="after" yPosition="above">
+        <button mat-menu-item [matMenuTriggerFor]="subMenu2">FrontEnd</button>
+        <button mat-menu-item>BacKEnd</button>
+      </mat-menu>
+      
+      <button mat-flat-button [matMenuTriggerFor]="appMenu3">Menu With sub</button>
+      <mat-menu #subMenu2="matMenu">
+          <button mat-menu-item>Angular</button>
+          <button mat-menu-item>React</button>
+          <button mat-menu-item>Veu</button>
+      </mat-menu>
+
+      <mat-menu #lazyMenu="matMenu">
+        <ng-template matMenuContent let-name="name" let-hobby="hobby">
+            <button mat-menu-item>Setting</button>
+            <button mat-menu-item>Hobby is {{hobby}}</button>
+            <button mat-menu-item>Log Out {{name}}</button>
+        </ng-template>
+      </mat-menu>
+
+      <button mat-raised-button
+      [matMenuTriggerData]="{name:'Kumar', hobby: 'football'}" 
+      [matMenuTriggerFor]="lazyMenu">Kumar</button>
+      <button mat-raised-button 
+      [matMenuTriggerData]="{name:'Krishaan', hobby: 'cricket'}"
+      [matMenuTriggerFor]="lazyMenu">Krishaan</button>
+</div>
+
+    
 
 
 <router-outlet></router-outlet>
