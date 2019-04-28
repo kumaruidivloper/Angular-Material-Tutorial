@@ -2,34 +2,6 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
-## Initial setup
-Step1: ng new <App-name> --style=scss --routing
-
-## SetUp Fake Server [ Not Req For This ]
-Step2: npm install json-server
-Step3: create db.json
-Step4: Create some initial Data in db.json file
-Step5: Edit package.json start property ["start": "concurrently \"ng serve\" \"json-server --watch db.json\" ",]
-Step6: npm install concurrently
-Step7: npm run start [For run the app]
-
-## Initial Angular Material Setup
-Single Cmd Install: npm install --save @angular/material [Other step CLI Will Ask you]
-
-## Initial Angular Material Setup One by One
-Step8: npm install --save @angular/material @angular/cdk  
-Step9: Add style.scss [@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';]
-Step10: npm install --save @angular/animations
-Step11: npm install material-icons
-Step12: npm install --save hammerjs
-Step13: npm install material-design-icons
-Step14: add style.scss [@import '~material-design-icons/iconfont/material-icons.css';]
-
-## After Install 
-Check the Boilerplate Changes
-
-
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
