@@ -1,100 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
-  <h4>Button Toggle</h4>
+  <h4>Mat-Icon</h4>
 </div>
-
+<!--https://material.io/tools/icons/?style=baseline -->
 <div class="container white-bg">
-  <mat-button-toggle #toggleBtn>Toggle</mat-button-toggle>
-  <span class="text-color">
-    Selected Value: {{toggleBtn.checked}}
-  </span>
-  <br><br>
-  <h4>Default Checked</h4>
-  <mat-button-toggle #toggleBtn1 checked>Toggle-1</mat-button-toggle>
-  <span class="text-color">
-    Selected Value: {{toggleBtn1.checked}}
-  </span>
-  <br><br>
-  <h4>Ripple Effects Disable</h4>
-  <mat-button-toggle #toggleBtn2 checked disableRipple>Toggle-1</mat-button-toggle>
-  <span class="text-color">
-    Selected Value: {{toggleBtn2.checked}}
-  </span>
-  <br><br>
-  <h4>Button Disable</h4>
-  <mat-button-toggle #toggleBtn3  disabled >Toggle-1</mat-button-toggle>
-  <span class="text-color">
-    Selected Value: {{toggleBtn3.checked}}
-  </span>
-</div>
-
-<div class="title white-bg">
-  <h4>Button Toggle Group</h4>
-</div>
-
-<div class="container white-bg">
-  <mat-button-toggle-group #toggleGroup="matButtonToggleGroup">
-    <mat-button-toggle value="angular">Angular</mat-button-toggle>
-    <mat-button-toggle value="react">React</mat-button-toggle>
-    <mat-button-toggle value="vue">Vue</mat-button-toggle>
-  </mat-button-toggle-group>
-  <span class="text-color">
-    Selected Multiple Value: {{toggleGroup.value}}
-  </span>
-
-  <br>
-  <br>
-  <h4>Multiple Select</h4>
-
-  <mat-button-toggle-group #toggleGroup1="matButtonToggleGroup" multiple>
-      <mat-button-toggle value="angular">Angular</mat-button-toggle>
-      <mat-button-toggle value="react">React</mat-button-toggle>
-      <mat-button-toggle value="vue">Vue</mat-button-toggle>
-    </mat-button-toggle-group>
-    <span class="text-color">
-      Selected Value: {{toggleGroup1.value}}
-    </span>
-
-
-    <h4>Select Value With Icon</h4>
-
-    <mat-button-toggle-group #group="matButtonToggleGroup">
-        <mat-button-toggle value="left">
-          <mat-icon>format_align_left</mat-icon>
-        </mat-button-toggle>
-        <mat-button-toggle value="center">
-          <mat-icon>format_align_center</mat-icon>
-        </mat-button-toggle>
-        <mat-button-toggle value="right">
-          <mat-icon>format_align_right</mat-icon>
-        </mat-button-toggle>
-        <mat-button-toggle value="justify" disabled>
-          <mat-icon>format_align_justify</mat-icon>
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-      <div class="example-selected-value text-color">
-        Selected value: {{group.value}}
-      </div>
-
-      <h4>Multiple Select With Icon</h4>
-
-    <mat-button-toggle-group #group1="matButtonToggleGroup" multiple>
-        <mat-button-toggle value="left">
-          <mat-icon>format_align_left</mat-icon>
-        </mat-button-toggle>
-        <mat-button-toggle value="center">
-          <mat-icon>format_align_center</mat-icon>
-        </mat-button-toggle>
-        <mat-button-toggle value="right">
-          <mat-icon>format_align_right</mat-icon>
-        </mat-button-toggle>
-        <mat-button-toggle value="justify" disabled>
-          <mat-icon>format_align_justify</mat-icon>
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-      <div class="example-selected-value text-color">
-        Selected Multiple value: {{group1.value}}
-      </div>
+  <mat-icon>grade</mat-icon>
+  <mat-icon>build</mat-icon>
+  <h4>Icon With Color</h4>
+  <mat-icon color="primary">bug_report</mat-icon>
+  <mat-icon color="warn">cached</mat-icon>
+  <mat-icon>fingerprint</mat-icon>
 </div>
 
 
