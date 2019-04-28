@@ -1,50 +1,40 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
-  <h4>Mat-DatePicker</h4>
+  <h4>Mat-Tooltip</h4>
 </div>
 
 <div class="container white-bg">
-  <h4>Basic Date Picker</h4>
-    <mat-form-field>
-        <input matInput [matDatepicker]="matDatePicker" placeholder="Choose a date">
-        <mat-datepicker-toggle matSuffix [for]="matDatePicker"></mat-datepicker-toggle>
-        <mat-datepicker #matDatePicker></mat-datepicker>
-    </mat-form-field>
+  <h4>Basic Tooltip</h4>
+  <button mat-raised-button 
+  matTooltip="Welcome to Codevolution">Hello</button>
 
-    <h4>Basic Date Picker View Year</h4>
-    <mat-form-field>
-        <input matInput [matDatepicker]="matDatePicker1" placeholder="Choose a date">
-        <mat-datepicker-toggle matSuffix [for]="matDatePicker1"></mat-datepicker-toggle>
-        <mat-datepicker #matDatePicker1 startView="year"></mat-datepicker>
-    </mat-form-field>
+  <h4>Basic Tooltip Postion [After]</h4>
+  <button mat-raised-button 
+  matTooltipPosition="after"
+  matTooltip="Welcome to Codevolution">Hello</button>
 
-    <h4>Basic Date Picker View Multi Year</h4>
-    <mat-form-field>
-        <input matInput [matDatepicker]="matDatePicker2" placeholder="Choose a date">
-        <mat-datepicker-toggle matSuffix [for]="matDatePicker2"></mat-datepicker-toggle>
-        <mat-datepicker #matDatePicker2 startView="multi-year"></mat-datepicker>
-    </mat-form-field>
+  <h4>Basic Tooltip Postion [Above]</h4>
+  <button mat-raised-button 
+  matTooltipPosition="above"
+  matTooltip="Welcome to Codevolution">Hello</button>
 
-    <h4>Basic Date Picker View Min Max</h4>
-    <mat-form-field>
-        <input matInput 
-        [min]="minDate"
-        [max]="maxDate"
-        [matDatepicker]="matDatePicker3" 
-        placeholder="Choose a date">
-        <mat-datepicker-toggle matSuffix [for]="matDatePicker3"></mat-datepicker-toggle>
-        <mat-datepicker #matDatePicker3></mat-datepicker>
-    </mat-form-field>
+  <h4>Basic Tooltip Postion [Before]</h4>
+  <button mat-raised-button 
+  matTooltipPosition="before"
+  matTooltip="Welcome to Codevolution">Hello</button>
 
-    <h4>Basic Date Picker Filter Select Date [sat & sun Disable]</h4>
-    <mat-form-field>
-        <input matInput
-        [matDatepickerFilter]="dateFilter"
-        [matDatepicker]="matDatePicker4" 
-        placeholder="Choose a date">
-        <mat-datepicker-toggle matSuffix [for]="matDatePicker4"></mat-datepicker-toggle>
-        <mat-datepicker #matDatePicker4></mat-datepicker>
-    </mat-form-field>
+  <h4>Basic Tooltip With Show Delay</h4>
+  <button mat-raised-button 
+  matTooltipPosition="after"
+  matTooltipShowDelay="2000"
+  matTooltip="Welcome to Codevolution">Hello</button>
+
+  <h4>Basic Tooltip With Show Delay & Hide Delay</h4>
+  <button mat-raised-button 
+  matTooltipPosition="after"
+  matTooltipShowDelay="2000"
+  matTooltipHideDelay="2000"
+  matTooltip="Welcome to Codevolution">Hello</button>
 </div>
 
     
