@@ -1,73 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
-  <h4>Mat-Badge</h4>
+  <h4>Mat-Progress-Spinner</h4>
 </div>
-<!--https://material.io/tools/icons/?style=baseline -->
+
 <div class="container white-bg Badge">
-  <h4>Default Position</h4>
+  <h4>Mat-progress-10%</h4>
+  <mat-progress-spinner value="10"></mat-progress-spinner>
+  <h4>Mat-progress-40%</h4>
+  <mat-progress-spinner value="40"></mat-progress-spinner>
+  <h4>Mat-progress-98%</h4>
+  <mat-progress-spinner value="98"></mat-progress-spinner>
 
-  <span matBadge="5">Default Position</span>
-  <h4>Below Before</h4>
-  <span matBadge="50" matBadgePosition="below before">Below Before</span>
-  <h4>Below After</h4>
-  <span matBadge="50" matBadgePosition="below after">Below After</span>
-  <h4>Above Before</h4>
-  <span matBadge="50" matBadgePosition="above before">Above Before</span>
-  <h4>Above After</h4>
-  <span matBadge="50" matBadgePosition="above after">Above After</span>
+  <h4>Animated Spinner</h4>
+  <mat-spinner></mat-spinner>
 
-  <h4>Badge Size</h4>
-  <span matBadge="50" matBadgePosition="above after" matBadgeSize="small">Small Badge Size</span>
-  <br><br>
-  <span matBadge="50" matBadgePosition="above after" matBadgeSize="medium">Medium Badge Size</span>
-  <br><br>
-  <span matBadge="5" matBadgePosition="above after" matBadgeSize="large">Large Badge Size</span>
-
-  <h4>Badge Color</h4>
-  <span matBadge="5" matBadgePosition="above after" matBadgeSize="small" matBadgeColor="primary">Primary Badge Color</span>
-  <br><br>
-  <span matBadge="5" matBadgePosition="above after" matBadgeSize="medium" matBadgeColor="accent">Accent Badge Color</span>
-  <br><br>
-  <span matBadge="5" matBadgePosition="above after" matBadgeSize="large" matBadgeColor="warn">Warn Badge Color</span>
-
-  <h4>Badge Overlap Fix</h4>
-  <span matBadge="5" matBadgePosition="above after" matBadgeSize="small" matBadgeColor="primary" matBadgeOverlap="false">Primary Badge Color</span>
-  <br><br>
-  <span matBadge="5" matBadgePosition="above after" matBadgeSize="medium" matBadgeColor="accent" matBadgeOverlap="false">Accent Badge Color</span>
-  <br><br>
-  <span matBadge="5" matBadgePosition="above after" matBadgeSize="large" matBadgeColor="warn" matBadgeOverlap="false">Warn Badge Color</span>
-
-  <h4>Badge Data Binding</h4>
-  <span [matBadge]="notifications" matBadgePosition="above after" matBadgeSize="small" matBadgeColor="primary" matBadgeOverlap="false">Primary Badge Color</span>
-  <br><br>
-  <span [matBadge]="notifications" matBadgePosition="above after" matBadgeSize="medium" matBadgeColor="accent" matBadgeOverlap="false">Accent Badge Color</span>
-  <br><br>
-  <span [matBadge]="notifications" matBadgePosition="above after" matBadgeSize="large" matBadgeColor="warn" matBadgeOverlap="false">Warn Badge Color</span>
-
-  <h4>Badge Conditional Display</h4>
-  <span 
-  [matBadge]="notifications" 
-  [matBadgeHidden]="notificationsZero === 0"
-  matBadgePosition="above after" 
-  matBadgeSize="small" 
-  matBadgeColor="primary" 
-  matBadgeOverlap="false">Badge Hidden Here</span>
-  <br><br>
-  <span 
-  [matBadge]="notifications"
-  [matBadgeHidden]="notifications === 0"
-  matBadgePosition="above after" 
-  matBadgeSize="medium" 
-  matBadgeColor="accent" 
-  matBadgeOverlap="false">Accent Badge Color</span>
-  <br><br>
-  <span 
-  [matBadge]="notifications" 
-  [matBadgeHidden]="notifications === 0"
-  matBadgePosition="above after" 
-  matBadgeSize="large"
-  matBadgeColor="warn" 
-  matBadgeOverlap="false">Warn Badge Color</span>
+  <h4>Show Spinner For Load Some Data Delay</h4>
+  <mat-spinner *ngIf="showSpinner" color="accent"></mat-spinner>
+  <span *ngIf="dataText" class="text-green">Data Loaded <mat-icon>face</mat-icon></span><br><br>
+  <button mat-raised-button (click)="loadData()" color="warn">Load Data</button>
 </div>
 
 
