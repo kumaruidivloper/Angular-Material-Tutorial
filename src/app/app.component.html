@@ -1,56 +1,29 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
-  <h4>Mat-Select</h4>
+  <h4>Mat-AutoComplete</h4>
 </div>
 
 <div class="container white-bg">
-  <h4>Basic Select</h4>
-    <mat-form-field>
-      <mat-label>Topic</mat-label>
-      <mat-select [(value)]="selectedValue">
-        <mat-option>None</mat-option>
-        <mat-option value="angular">Angular</mat-option>
-        <mat-option value="react">React</mat-option>
-        <mat-option value="vue">Vue</mat-option>
-      </mat-select>
-    </mat-form-field>
-    {{selectedValue}}
-
-    <h4>Group Select</h4>
-    <mat-form-field>
-      <mat-label>Topic</mat-label>
-      <mat-select [(value)]="selectedGroupValue">
-        <mat-option>None</mat-option>
-        <mat-optgroup label="Web">
-          <mat-option value="angular">Angular</mat-option>
-          <mat-option value="react">React</mat-option>
-          <mat-option value="vue">Vue</mat-option>
-        </mat-optgroup>
-        <mat-optgroup label="Mobile">
-            <mat-option value="ionic">Ionic</mat-option>
-            <mat-option value="reactnative">Reactnative</mat-option>
-        </mat-optgroup>
-      </mat-select>
-    </mat-form-field>
-    {{selectedGroupValue}}
-
-    <h4>Group Select with Multiple</h4>
-    <mat-form-field>
-      <mat-label>Topic</mat-label>
-      <mat-select [(value)]="selectedGroupValueMulti" multiple>
-        <mat-option>None</mat-option>
-        <mat-optgroup label="Web">
-          <mat-option value="angular">Angular</mat-option>
-          <mat-option value="react">React</mat-option>
-          <mat-option value="vue">Vue</mat-option>
-        </mat-optgroup>
-        <mat-optgroup label="Mobile">
-            <mat-option value="ionic">Ionic</mat-option>
-            <mat-option value="reactnative">Reactnative</mat-option>
-        </mat-optgroup>
-      </mat-select>
-    </mat-form-field>
-    {{selectedGroupValueMulti}}
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="State" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let state of filteredStates | async" [value]="state.name">
+              <img class="example-option-img" aria-hidden [src]="state.flag" height="25">
+              <span>{{state.name}}</span> |
+              <small>Population: {{state.population}}</small>
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      
+        <br>
+      
+        <mat-slide-toggle
+          [checked]="stateCtrl.disabled"
+          (change)="stateCtrl.disabled ? stateCtrl.enable() : stateCtrl.disable()">
+          Disable Input?
+        </mat-slide-toggle>
+      </form>
 </div>
 
     
