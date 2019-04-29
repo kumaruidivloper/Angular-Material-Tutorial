@@ -1,39 +1,27 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
     <mat-card>
-      <h4>Mat-Clips-Autocomplete</h4>
+      <h4>Mat-Clips-Input</h4>
     </mat-card>  
 </div>
 
 <div class="container white-bg">
   <mat-card>
-      <h4>Mat-Clips-Autocomplete</h4>  
+      <h4>Mat-Clips-Input</h4> 
       <mat-form-field class="example-chip-list">
           <mat-chip-list #chipList>
-            <mat-chip
-              *ngFor="let fruit of fruits"
-              [selectable]="selectable"
-              [removable]="removable"
-              (removed)="remove(fruit)">
-              {{fruit}}
+            <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+                     [removable]="removable" (removed)="remove(fruit)">
+              {{fruit.name}}
               <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
             </mat-chip>
-            <input
-              placeholder="New fruit..."
-              #fruitInput
-              [formControl]="fruitCtrl"
-              [matAutocomplete]="auto"
-              [matChipInputFor]="chipList"
-              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-              [matChipInputAddOnBlur]="addOnBlur"
-              (matChipInputTokenEnd)="add($event)">
+            <input placeholder="New fruit..."
+                   [matChipInputFor]="chipList"
+                   [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                   [matChipInputAddOnBlur]="addOnBlur"
+                   (matChipInputTokenEnd)="add($event)">
           </mat-chip-list>
-          <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-            <mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
-              {{fruit}}
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
+        </mat-form-field> 
   </mat-card>
   
 </div>
