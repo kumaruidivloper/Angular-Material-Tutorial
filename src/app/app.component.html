@@ -1,9 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
-  <h4>Mat-SnackBar</h4>
+  <mat-card>
+    <h4>Mat-SnackBar</h4>
+  </mat-card>
 </div>
 
 <div class="container white-bg">
+  <mat-card>
   <h4>Basic SnackBar</h4>
   <button mat-raised-button (click)="openSnackBar('Item deleted')">
     Show snack-bar
@@ -18,9 +21,10 @@
   <button mat-raised-button (click)="openSnackBar2('Item deleted', 'Undo')">
     Delete
   </button>
-  <button mat-raised-button color="warn" style="margin-left: 10px" (click)="openCustomSnackBar()">
+  <button mat-raised-button color="warn" class="ml-10" (click)="openCustomSnackBar()">
     Show custom snackbar
   </button>
+</mat-card>
 </div>
 
     
