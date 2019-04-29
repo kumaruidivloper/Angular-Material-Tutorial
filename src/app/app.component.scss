@@ -15,8 +15,8 @@ div.white-bg {
     // border: #999999 solid 1px;
 }
 
-.example-chip-list {
-    width: 100%;
+mat-chip {
+    max-width: 200px;
   }
 
 .example-button-row button,

@@ -1,27 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
     <mat-card>
-      <h4>Mat-Clips-Input</h4>
+      <h4>Mat-Stacked-Clips</h4>
     </mat-card>  
 </div>
 
 <div class="container white-bg">
   <mat-card>
-      <h4>Mat-Clips-Input</h4> 
-      <mat-form-field class="example-chip-list">
-          <mat-chip-list #chipList>
-            <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
-                     [removable]="removable" (removed)="remove(fruit)">
-              {{fruit.name}}
-              <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-            </mat-chip>
-            <input placeholder="New fruit..."
-                   [matChipInputFor]="chipList"
-                   [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                   [matChipInputAddOnBlur]="addOnBlur"
-                   (matChipInputTokenEnd)="add($event)">
-          </mat-chip-list>
-        </mat-form-field> 
+      <mat-chip-list class="mat-chip-list-stacked">
+          <mat-chip *ngFor="let chip of availableColors" selected [color]="chip.color">
+            {{chip.name}}
+          </mat-chip>
+        </mat-chip-list>
   </mat-card>
   
 </div>
