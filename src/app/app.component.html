@@ -1,9 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
-  <h4>Mat-Progress-Bar</h4>
+  <mat-card>
+      <h4>Mat-Progress-Bar</h4>
+  </mat-card>
 </div>
 
 <div class="container white-bg Badge">
+  <mat-card>
   <h4>Mat-progress-10%</h4>
   <mat-progress-bar mode="determinate" value="10"></mat-progress-bar>
   <h4>Mat-progress-40%</h4>
@@ -18,6 +21,7 @@
   <mat-progress-bar mode="indeterminate" *ngIf="showSpinner" color="accent"></mat-progress-bar>
   <span *ngIf="dataText" class="text-green">Data Loaded <mat-icon>face</mat-icon></span><br><br>
   <button mat-raised-button (click)="loadData()" color="warn">Load Data</button>
+</mat-card>
 </div>
 
 
