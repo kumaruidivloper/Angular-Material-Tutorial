@@ -1,17 +1,30 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
     <mat-card>
-      <h4>Mat-Stacked-Clips</h4>
+      <h4>Mat-Tree-Dynamic-Data</h4>
     </mat-card>  
 </div>
 
 <div class="container white-bg">
   <mat-card>
-      <mat-chip-list class="mat-chip-list-stacked">
-          <mat-chip *ngFor="let chip of availableColors" selected [color]="chip.color">
-            {{chip.name}}
-          </mat-chip>
-        </mat-chip-list>
+      <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+          <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+            <button mat-icon-button disabled></button>
+            {{node.item}}
+          </mat-tree-node>
+          <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
+            <button mat-icon-button
+                    [attr.aria-label]="'toggle ' + node.filename" matTreeNodeToggle>
+              <mat-icon class="mat-icon-rtl-mirror">
+                {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+              </mat-icon>
+            </button>
+            {{node.item}}
+            <mat-progress-bar *ngIf="node.isLoading"
+                              mode="indeterminate"
+                              class="example-tree-progress-bar"></mat-progress-bar>
+          </mat-tree-node>
+        </mat-tree>
   </mat-card>
   
 </div>
