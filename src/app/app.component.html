@@ -1,28 +1,28 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="title white-bg">
     <mat-card>
-      <h4>Mat-Tree-Dynamic-Data</h4>
+      <h4>Mat-Tree-Flat-Node</h4>
     </mat-card>  
 </div>
 
 <div class="container white-bg">
   <mat-card>
       <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+          <!-- This is the tree node template for leaf nodes -->
           <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+            <!-- use a disabled button to provide padding for tree leaf -->
             <button mat-icon-button disabled></button>
-            {{node.item}}
+            {{node.name}}
           </mat-tree-node>
-          <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
-            <button mat-icon-button
-                    [attr.aria-label]="'toggle ' + node.filename" matTreeNodeToggle>
+          <!-- This is the tree node template for expandable nodes -->
+          <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+            <button mat-icon-button matTreeNodeToggle
+                    [attr.aria-label]="'toggle ' + node.name">
               <mat-icon class="mat-icon-rtl-mirror">
                 {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
               </mat-icon>
             </button>
-            {{node.item}}
-            <mat-progress-bar *ngIf="node.isLoading"
-                              mode="indeterminate"
-                              class="example-tree-progress-bar"></mat-progress-bar>
+            {{node.name}}
           </mat-tree-node>
         </mat-tree>
   </mat-card>
