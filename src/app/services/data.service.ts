@@ -8,7 +8,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 })
 
 export class DataService {
-  private readonly API_URL = 'https://api.github.com/repos/angular/angular/issues';
+  private readonly API_URL = 'http://localhost:3000/issuesDetails';
 
   dataChange: BehaviorSubject<Issue[]> = new BehaviorSubject<Issue[]>([]);
   // Temporarily stores data from dialogs
