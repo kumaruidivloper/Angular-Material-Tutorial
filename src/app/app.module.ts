@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { FormsModule } from '@angular/forms';
+import { SimpledialogcomponentComponent } from './simpledialogcomponent/simpledialogcomponent.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SimpledialogcomponentComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +20,9 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     FormsModule
   ],
+  entryComponents: [
+    SimpledialogcomponentComponent,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
