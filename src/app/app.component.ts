@@ -10,14 +10,29 @@ import { SimpledialogcomponentComponent } from './simpledialogcomponent/simpledi
 export class AppComponent implements OnInit {
   title = 'Angular-Material-Tutorial';
 
-  simpleDialog: MatDialogRef<SimpledialogcomponentComponent>;
+ firstName: string;
+ lastName: string;
+ dialogConfig: MatDialogConfig;
+ dialogWithForm: MatDialogRef<SimpledialogcomponentComponent>;
 
   constructor(private dialogModel: MatDialog) { }
 
   ngOnInit() {
   }
 
-  dialog() {
-  this.simpleDialog = this.dialogModel.open(SimpledialogcomponentComponent);
-  }
+  dialogForm() {
+    // Opening the dialog component
+    const dialogWithForm = this.dialogModel.open(SimpledialogcomponentComponent, {
+    width: '250px',
+    data: { firstName: this.firstName, lastName: this.lastName }
+    });
+    // When user close the dialog
+    dialogWithForm.afterClosed().subscribe(result => {
+    console.log('You have closed the dialog');
+    if (result) {
+    this.firstName = result.firstName;
+    this.lastName = result.lastName;
+    }
+    });
+    }
 }

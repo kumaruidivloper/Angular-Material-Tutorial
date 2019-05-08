@@ -5,8 +5,13 @@
   </div>
  </mat-card>
  <mat-card>
-  <h2>Simple Dialog With Action Button</h2>
-  <button mat-raised-button (click)="dialog()">Click Me To Open Dialog</button>
+  <h2>Dialog With Form</h2>
+  <button mat-raised-button (click)="dialogForm()">Click Me To Open</button>
+  <br>
+  <ng-template [ngIf]="firstName && lastName">
+  <h2>First Name IS : {{firstName}} </h2>
+  <h2>Last Name IS : {{lastName}} </h2>
+  </ng-template>
  </mat-card>
 
     
