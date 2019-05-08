@@ -1,42 +1,103 @@
-div.container {
-    margin:25px auto; 
-    padding: 25px; 
-    background: #999999; 
-    width:80% 
-}
-div.title {
-    margin:25px auto; 
-    padding:0 25px; 
-    background: #999999; 
-    width:80% 
-}
-div.white-bg {
-    background: #fff;
-    // border: #999999 solid 1px;
-}
+// div.container {
+//     margin:25px auto; 
+//     padding: 25px; 
+//     background: #999999; 
+//     width:80% 
+// }
+// div.title {
+//     margin:25px auto; 
+//     padding:0 25px; 
+//     background: #999999; 
+//     width:80% 
+// }
+// div.white-bg {
+//     background: #fff;
+//     // border: #999999 solid 1px;
+// }
 
-.example-button-row button,
-.example-button-row a {
-  margin-right: 8px;
-}
-.text-color {
-    color:red;
-    font-weight: bold
-}
+// .example-button-row button,
+// .example-button-row a {
+//   margin-right: 8px;
+// }
+// .text-color {
+//     color:red;
+//     font-weight: bold
+// }
 
-.text-green {
-    color:green;
-    font-weight: bold
-}
+// .text-green {
+//     color:green;
+//     font-weight: bold
+// }
 
-div.Badge h4 {
-    margin-top:30px;
-}
+// div.Badge h4 {
+//     margin-top:30px;
+// }
 
-mat-grid-tile {
-    background-color: lightblue;
-}
+// mat-grid-tile {
+//     background-color: lightblue;
+// }
 
-mat-horizontal-stepper button, mat-vertical-stepper button {
-    margin-right:10px;
-}
+// mat-horizontal-stepper button, mat-vertical-stepper button {
+//     margin-right:10px;
+// }
+
+
+
+/* Structure */
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Toolbar */
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  /* Filter */
+  .form {
+    min-height: 56px;
+    max-height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 8px 24px 0;
+    font-size: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid transparent;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    flex-grow: 1;
+    margin-top: 8px;
+  }
+  
+  /* Mat table */
+  .no-results {
+    display: flex;
+    justify-content: center;
+    padding: 14px;
+    font-size: 14px;
+    font-style: italic;
+  }
+  
+  .mat-cell:nth-child(1),
+  .mat-header-cell:nth-child(1){
+    flex: 0 0 6%;
+  }
+  
+  .mat-cell:nth-child(2),
+  .mat-header-cell:nth-child(2){
+    flex: 0 0 30%;
+  }
+  
+  .mat-cell:nth-child(3),
+  .mat-header-cell:nth-child(3){
+    flex: 0 0 6%;
+  }
+  
+  .mat-cell:nth-child(7),
+  .mat-header-cell:nth-child(7){
+    flex: 0 0 7%;
+  }
+  
