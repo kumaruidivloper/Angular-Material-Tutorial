@@ -82,9 +82,9 @@ const MaterialComponents = [
     exports: [
         MaterialComponents
     ],
-    providers: [  
-        {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}  
-      ], 
+    providers: [
+        {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
+      ]
 })
 export class MaterialModule {
 
