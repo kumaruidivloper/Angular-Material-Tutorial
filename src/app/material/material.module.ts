@@ -76,7 +76,7 @@ const MaterialComponents = [
         MatToolbarModule,
         MatTooltipModule,
         MatFormFieldModule
-]
+];
 
 @NgModule({
     exports: [
