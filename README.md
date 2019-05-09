@@ -1,6 +1,7 @@
 # AngularMaterialTutorial
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+https://stackoverflow.com/questions/47443582/angular-material-table-is-it-possible-to-update-rows-without-entire-table-ref
 
 ## Development server
 
